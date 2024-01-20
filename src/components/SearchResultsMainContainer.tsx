@@ -84,11 +84,16 @@ const SearchResultsMainContainer = () => {
                   </div>
                 </div>
               </div>
-              <div className="bg-[#525d79] px-6 py-4">
+              <div className="bg-[#525d79] px-6 py-4 flex justify-between">
                 <div className="flex gap-2 color-E3F1FD text-base">
                   <Typography> {cardData?.datePosted}</Typography>
                   <Typography>.</Typography>
                   <Typography>10 applicants</Typography>
+                </div>
+                <div className="bg-[#5CA4A9] py-1 px-3 rounded-3xl text-sm ">
+                  <Typography className="color-E3F1FD font-bold cursor-pointer">
+                    APPLY NOW
+                  </Typography>
                 </div>
               </div>
             </div>
