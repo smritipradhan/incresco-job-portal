@@ -21,9 +21,9 @@ const App = () => {
 
   return (
     <ErrorBoundary fallback={<div>Something went wrong</div>}>
-      <main className="h-full">
+      <main className="h-screen overflow-hidden">
         <Headers />
-        <div className="bg-[#171C28] flex p-11 gap-9 justify-center">
+        <div className="bg-[#171C28] flex p-11 gap-9 justify-center h-screen  ">
           <FilterBySidebar />
           <SearchResultsMainContainer />
         </div>
