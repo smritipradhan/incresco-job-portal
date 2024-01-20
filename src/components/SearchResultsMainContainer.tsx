@@ -7,19 +7,33 @@ const SearchResultsMainContainer = () => {
 
   return (
     <div
-      className="bg-[#1D2331] rounded-md p-8 flex flex-col gap-6"
-      style={{ width: "906px" }}
+      className="bg-[#1D2331] rounded-md p-8 flex flex-col gap-6 overflow-hidden overflow-y-scroll"
+      style={{ width: "906px", height: "81vh" }}
     >
+      <Typography className="color-E3F1FD text-xl font-bold">
+        SEARCH RESULTS / JOBS
+      </Typography>
       {Array.isArray(filteredData) && filteredData.length !== 0 ? (
         filteredData?.map((cardData) => {
           return (
             <div className="rounded-xl box-border">
               <div className="bg-[#323C52] p-6 flex justify-between relative">
                 <div className="flex gap-7">
-                  <div className="w-20 h-20 bg-[#FFF] rounded-2xl"></div>
+                  {cardData?.imageUrl ? (
+                    <div className="w-20 h-20 bg-[#FFF] rounded-2xl">
+                      <img
+                        src={cardData.imageUrl}
+                        alt="company Logo "
+                        className="h-full w-full"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-20 h-20 bg-[#FFF] rounded-2xl"></div>
+                  )}
+
                   <div>
                     <Typography className="color-E3F1FD text-xl font-bold">
-                      {cardData.jobRole}
+                      {cardData?.jobRole}
                     </Typography>
                     <Typography className="color-E3F1FD  text-base">
                       {cardData?.company}

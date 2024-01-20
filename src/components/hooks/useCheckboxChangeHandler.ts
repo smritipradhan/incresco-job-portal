@@ -35,7 +35,19 @@ const useCheckboxChangeHandler = () => {
     dispatch(filterActions.setFilterTypeData(jobFilterUpdated));
   };
 
-  return { handleCheckboxChange };
+  const handleFilterClear = () => {
+    const updatedFilterJobData = [...filterTypeData];
+
+    let jobFilterUpdated = updatedFilterJobData.map((filterType) => {
+      let dataTobeUpdated = filterType?.data?.map((filterObj: any) => {
+        return { ...filterObj, checked: false };
+      });
+      return { ...filterType, data: dataTobeUpdated };
+    });
+
+    dispatch(filterActions.setFilterTypeData(jobFilterUpdated));
+  };
+  return { handleCheckboxChange, handleFilterClear };
 };
 
 export default useCheckboxChangeHandler;

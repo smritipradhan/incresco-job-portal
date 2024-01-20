@@ -180,6 +180,7 @@ const useFilterChangeHandler = () => {
 
       dispatch(filterActions.setFilteredData(finalData));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch, filterTypeData, originalData, searchedValue]);
   return;
 };

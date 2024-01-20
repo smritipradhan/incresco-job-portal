@@ -44,3 +44,7 @@ code {
 .color-5CA4A9 {
   color: #5ca4a9;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}

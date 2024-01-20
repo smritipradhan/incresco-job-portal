@@ -25,7 +25,7 @@ const FilterComponent = (props: IFilterComponent) => {
                     <label className="flex w-full cursor-pointer ">
                       <ListItemPrefix className="mr-3">
                         <Checkbox
-                          checked={company?.value}
+                          checked={company?.checked}
                           ripple={false}
                           className="hover:before:opacity-0"
                           containerProps={{
